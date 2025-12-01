@@ -9,7 +9,7 @@ public class Validation implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        String msg = BrowseTheWeb.as(actor).find(AdminPage.USER_CREATED).getText();
+        String msg = BrowseTheWeb.as(actor).find(AdminPage.LAST_USER_IN_TABLE).getText();
         return msg;
     }
 

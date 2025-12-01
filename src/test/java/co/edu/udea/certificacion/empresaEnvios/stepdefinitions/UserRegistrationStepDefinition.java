@@ -9,11 +9,11 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.hamcrest.Matchers;
@@ -27,6 +27,7 @@ public class UserRegistrationStepDefinition {
 
     @Before
     public void config(){
+        WebDriverManager.chromedriver().setup();
         DanielJose.can(BrowseTheWeb.with(theDriver));
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("DanielJose");
@@ -46,7 +47,16 @@ public class UserRegistrationStepDefinition {
     @Then("The new user should be created successfully")
     public void theNewUserShouldBeCreatedSuccessfully() {
 
-        GivenWhenThen.then(DanielJose).should(GivenWhenThen.seeThat(Validation.Register(), Matchers.containsString("Alejandro Cano")));
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Obtener el nombre generado aleatoriamente
+        String expectedUserName = DanielJose.recall("userName");
+
+        GivenWhenThen.then(DanielJose).should(GivenWhenThen.seeThat(Validation.Register(), Matchers.containsString(expectedUserName)));
 
     }
 
