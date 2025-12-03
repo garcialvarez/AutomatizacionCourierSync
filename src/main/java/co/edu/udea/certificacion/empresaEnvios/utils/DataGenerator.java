@@ -28,6 +28,10 @@ public class DataGenerator {
         return String.valueOf(faker.number().numberBetween(3000000000L, 3999999999L));
     }
 
+    public static String generatePesoVolumen() {
+        return String.valueOf(faker.number().numberBetween(1, 5000));
+    }
+
     public static String generatePassword() {
         return faker.internet().password(8, 12, true, false);
     }

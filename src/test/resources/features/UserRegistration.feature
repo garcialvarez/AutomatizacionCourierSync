@@ -1,4 +1,4 @@
-#Author: Daniel
+#Author: DanielJose
   #Language: en
 
 Feature: User Registration
