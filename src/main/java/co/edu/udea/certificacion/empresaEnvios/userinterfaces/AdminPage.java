@@ -7,8 +7,6 @@ public class AdminPage extends PageObject {
 
     public static final Target PRESS_USUARIOS = Target.the("Press Usuarios Button").locatedBy("//*[@id=\"root\"]/div[2]/header/div/div/div[1]/nav/button[3]");
     public static final Target PRESS_REGISTRAR_USUARIO = Target.the("Press Registrar Usuario Button").locatedBy("//*[@id=\"root\"]/div[2]/main/div/div[1]/button");
-    public static final Target USER_CREATED = Target.the("Usuario creado en la tabla").locatedBy("//*[@id=\"root\"]/div[2]/main/div/div[2]/div/div/table/tbody");
-    public static final Target LAST_USER_IN_TABLE = Target.the("Último usuario en la tabla").locatedBy("//*[@id=\"root\"]/div[2]/main/div/div[2]/div/div/table/tbody/tr[last()]/td[1]");
     public static final Target USER_CELL_CONTAINING_NAME = Target.the("Celda que contiene el nombre del usuario")
             .locatedBy("//*[@id=\"root\"]/div[2]/main/div/div[2]/div/div/table/tbody//td[contains(normalize-space(.), '{0}')]");
 }

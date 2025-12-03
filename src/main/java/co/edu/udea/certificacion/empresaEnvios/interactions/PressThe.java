@@ -14,15 +14,12 @@ public class PressThe implements Interaction {
         actor.attemptsTo(Click.on(ShipmentPage.PRESS_ENVIOS));
         WaitTime.putWaitTimeOf(3000);
         actor.attemptsTo(Click.on(ShipmentPage.PRESS_DELETE_BUTTON));
-        WaitTime.putWaitTimeOf(3000);
+        WaitTime.putWaitTimeOf(2000);
         actor.attemptsTo(Click.on(ShipmentPage.PRESS_CONFIRM_DELETE));
-        WaitTime.putWaitTimeOf(3000);
-
-
+        WaitTime.putWaitTimeOf(5000);
     }
 
     public static PressThe DeleteButton(){
         return Tasks.instrumented(PressThe.class);
     }
-
 }

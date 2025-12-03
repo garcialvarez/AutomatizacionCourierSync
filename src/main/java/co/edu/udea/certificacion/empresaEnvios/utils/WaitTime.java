@@ -9,13 +9,9 @@ public class WaitTime {
     public WaitTime(Integer millis) {
 
         try {
-
             Thread.sleep(millis);
-
         } catch (InterruptedException e) {
-
             e.printStackTrace();
-
         }
 
         this.millis = millis;
@@ -23,10 +19,7 @@ public class WaitTime {
     }
 
     public static WaitTime putWaitTimeOf(Integer millis) {
-
         waitTime = new WaitTime(millis);
-
         return waitTime;
-
     }
 }
