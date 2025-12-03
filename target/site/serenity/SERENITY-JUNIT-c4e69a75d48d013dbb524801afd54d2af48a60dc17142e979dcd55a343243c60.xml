@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="User Registration" skipped="0" tests="1" time="4.49" timestamp="2025-11-30 11:13:11"><testcase name="Register a new user successfully"><failure message="Expected condition failed: waiting for By.xpath: //*[@id=&quot;root&quot;]/div[2]/main/div/div/div[2]/form/div[5]/button[2] to be present (tried for 30 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.xpath: //*[@id="root"]/div[2]/main/div/div/div[2]/form/div[5]/button[2] to be present (tried for 30 second(s) with 100 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.xpath: //*[@id="root"]/div[2]/main/div/div/div[2]/form/div[5]/button[2] to be present (tried for 30 second(s) with 100 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: driver.version: unknown&#13;
-co.edu.udea.certificacion.empresaEnvios.interactions.ClickTo.performAs(ClickTo.java:53)&#13;
-co.edu.udea.certificacion.empresaEnvios.tasks.EnterTo.performAs(EnterTo.java:12)&#13;
-co.edu.udea.certificacion.empresaEnvios.stepdefinitions.UserRegistrationStepDefinition.iSelectRegisterNewUserAndFillAllTheRequiredData(UserRegistrationStepDefinition.java:44)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="User Registration" skipped="0" tests="1" time="4.84" timestamp="2025-12-03 04:09:46"><testcase name="Register a new user successfully"/></testsuite>

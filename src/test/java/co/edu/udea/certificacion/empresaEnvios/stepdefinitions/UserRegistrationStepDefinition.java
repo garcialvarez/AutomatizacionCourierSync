@@ -46,18 +46,14 @@ public class UserRegistrationStepDefinition {
     }
     @Then("The new user should be created successfully")
     public void theNewUserShouldBeCreatedSuccessfully() {
+        // Pequeña espera adicional por estabilidad
+        try { Thread.sleep(3000); } catch (InterruptedException e) { /* ignore */ }
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Obtener el nombre generado aleatoriamente
+        // Obtener el nombre generado aleatoriamente y verificar que aparece en la tabla
         String expectedUserName = DanielJose.recall("userName");
-
-        GivenWhenThen.then(DanielJose).should(GivenWhenThen.seeThat(Validation.Register(), Matchers.containsString(expectedUserName)));
-
+        GivenWhenThen.then(DanielJose).should(
+                GivenWhenThen.seeThat(Validation.Register(expectedUserName), Matchers.containsString(expectedUserName))
+        );
     }
 
 }

@@ -3,7 +3,6 @@ package co.edu.udea.certificacion.empresaEnvios.utils;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
-import java.util.Random;
 
 public class DataGenerator {
 
